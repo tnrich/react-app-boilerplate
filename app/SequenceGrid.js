@@ -1,6 +1,7 @@
 var React = require('react');
 var Griddle = require('griddle-react');
 var fakedata = require('./fakedata.js');
+var SequenceLine = require('./SequenceLine.js');
 
 
 var exampleMetaData = [{
@@ -35,7 +36,7 @@ var exampleMetaData = [{
   "locked": false,
   "visible": true,
   "displayName": "Favorite Number"
-}]
+}];
 
 var SequenceGrid = React.createClass({
   render: function () {

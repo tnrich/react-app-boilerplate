@@ -1,3 +1,4 @@
+var auth = require('./auth.js');
 var Authentication = {
   statics: {
     willTransitionTo: function (transition) {

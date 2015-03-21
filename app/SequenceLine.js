@@ -35,7 +35,7 @@ var exampleMetaData = [{
   "locked": false,
   "visible": true,
   "displayName": "Favorite Number"
-}]
+}];
 
 var SequenceLine = React.createClass({
   render: function () {
