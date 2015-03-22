@@ -1,5 +1,4 @@
 var React = require('react');
-var Griddle = require('griddle-react');
 var fakedata = require('./fakedata.js');
 
 

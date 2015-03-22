@@ -1,6 +1,5 @@
 var React = require('react');
 
-var Griddle = require('griddle-react');
 var fakedata = require('./fakedata.js');
 
 var exampleMetaData = [{
@@ -41,9 +40,10 @@ var SequenceLine = React.createClass({
   render: function () {
     return (
       <div>
-        <Griddle results={fakedata} tableClassName="table" showFilter={true}
- showSettings={true} columns={["name", "circular", "features", "description"]} />
+        
       </div>
     );
   }
 });
+
+//<Griddle results={fakedata} tableClassName="table" showFilter={true} showSettings={true} columns={["name", "circular", "features", "description"]} />

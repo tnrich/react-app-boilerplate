@@ -1,5 +1,19 @@
 //fake auth library
-var pretendRequest = require('./pretendRequest');
+// var pretendRequest = require('./pretendRequest');
+function pretendRequest(email, pass, cb) {
+
+  setTimeout(function () {
+    if (email === 'joe@example.com' && pass === 'password1') {
+      cb({
+        authenticated: true,
+        token: Math.random().toString(36).substring(7)
+      });
+    } else {
+      cb({authenticated: false});
+    }
+  }, 0);
+}
+
 var auth = {
   login: function (email, pass, cb) {
     cb = arguments[arguments.length - 1];

@@ -43,7 +43,7 @@ var browserifyTask = function (options) {
     console.log('Building APP bundle');
     appBundler.bundle()
       .on('error', gutil.log)
-      .pipe(source('main.js'))
+      .pipe(source('App.js'))
       .pipe(gulpif(!options.development, streamify(uglify())))
       .pipe(gulp.dest(options.dest))
       .pipe(gulpif(options.development, livereload()))
@@ -150,7 +150,7 @@ gulp.task('default', function () {
 
   browserifyTask({
     development: true,
-    src: './app/main.js',
+    src: './app/App.js',
     dest: './build'
   });
   
@@ -166,7 +166,7 @@ gulp.task('deploy', function () {
 
   browserifyTask({
     development: false,
-    src: './app/main.js',
+    src: './app/App.js',
     dest: './dist'
   });
   

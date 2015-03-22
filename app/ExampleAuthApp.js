@@ -188,5 +188,3 @@ var routes = (
 Router.run(routes, function (Handler) {
   React.render(<Handler/>, document.getElementById('example'));
 });
-Status API Training Shop Blog About
-© 2015 GitHub, Inc. Terms Privacy Security Contact
