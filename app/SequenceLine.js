@@ -40,10 +40,10 @@ var SequenceLine = React.createClass({
   render: function () {
     return (
       <div>
-        
+        SequenceLine
       </div>
     );
   }
 });
 
-//<Griddle results={fakedata} tableClassName="table" showFilter={true} showSettings={true} columns={["name", "circular", "features", "description"]} />
+module.exports = SequenceLine;

@@ -1,7 +1,8 @@
 var React = require('react');
 var fakedata = require('./fakedata.js');
 var SequenceLine = require('./SequenceLine.js');
-
+var Authentication = require('./Authentication.js');
+var auth = require('./auth.js');
 
 var exampleMetaData = [{
   "columnName": "name",
@@ -37,7 +38,9 @@ var exampleMetaData = [{
   "displayName": "Favorite Number"
 }];
 
-var SequenceGrid = React.createClass({
+var SequenceLibrary = React.createClass({
+  mixins: [ Authentication ],
+
   render: function () {
     return (
       <div>
@@ -47,4 +50,4 @@ var SequenceGrid = React.createClass({
   }
 });
 
-module.exports = SequenceGrid;
+module.exports = SequenceLibrary;
