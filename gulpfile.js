@@ -13,6 +13,7 @@ var gutil = require('gulp-util');
 var shell = require('gulp-shell');
 var glob = require('glob');
 var livereload = require('gulp-livereload');
+var lrload = require('livereactload');
 var jasminePhantomJs = require('gulp-jasmine2-phantomjs');
 
 // External dependencies you do not want to rebundle while developing,
@@ -39,6 +40,7 @@ var browserifyTask = function (options) {
 
   // The rebundle process
   var rebundle = function () {
+    
     var start = Date.now();
     console.log('Building APP bundle');
     appBundler.bundle()
@@ -46,7 +48,8 @@ var browserifyTask = function (options) {
       .pipe(source('App.js'))
       .pipe(gulpif(!options.development, streamify(uglify())))
       .pipe(gulp.dest(options.dest))
-      .pipe(gulpif(options.development, livereload()))
+      // .pipe(gulpif(options.development, livereload()))
+      .pipe(lrload.gulpnotify())
       .pipe(notify(function () {
         console.log('APP bundle built in ' + (Date.now() - start) + 'ms');
       }));
@@ -70,9 +73,10 @@ var browserifyTask = function (options) {
 		var testBundler = browserify({
 			entries: testFiles,
 			debug: true, // Gives us sourcemapping
-			transform: [reactify],
+			transform: [reactify, lrload],
 			cache: {}, packageCache: {}, fullPaths: true // Requirement of watchify
 		});
+    lrload.listen()
 
 		dependencies.forEach(function (dep) {
 			testBundler.external(dep);

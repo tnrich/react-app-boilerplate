@@ -15,8 +15,9 @@ var RowItem = React.createClass({
     return (
       <div className="infinite-list-item">
         <div className="rowContainer">
+            row
             <text x="5" y="60" textLength={visibilityParameters.rowWidth} lengthAdjust="spacingAndGlyphs">
-              {row.sequence}
+              {row.sequence} rrrr
             </text> 
         </div>
       </div>
