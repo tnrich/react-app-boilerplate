@@ -1,3 +1,4 @@
+//#deprecated
 var React = require('react');
 
 var fakedata = require('./fakedata.js');

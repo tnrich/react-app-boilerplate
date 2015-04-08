@@ -7,7 +7,7 @@ var Link = Router.Link;
 
 var Dashboard = require('./Dashboard.js');
 var SequenceLibrary = require('./SequenceLibrary.js');
-var SequenceEditor = require('./SequenceEditor.js');
+var SequenceEditor2 = require('./SequenceEditor2.js');
 
 var Login = require('./Login.js');
 var Logout = require('./Logout.js');
@@ -50,7 +50,7 @@ var App = React.createClass({
             <li><Link to="about">About</Link></li>
             <li><Link to="dashboard">Dashboard</Link> (authenticated)</li>
             <li><Link to="sequences">Sequences</Link> (authenticated)</li>
-            <li><Link to="SequenceEditor">SequenceEditor</Link> (authenticated)</li>
+            <li><Link to="SequenceEditor2">SequenceEditor2</Link> (authenticated)</li>
           </ul>
         </header>
         <RouteHandler/>
@@ -66,7 +66,7 @@ var routes = (
     <Route path="/about" name="about" handler={About}/>
     <Route path="/sequenceLibrary" name="sequences" handler={SequenceLibrary}/>
     <Route path="/dashboard" name="dashboard" handler={Dashboard}/>
-    <Route path="/sequenceEditor" name="SequenceEditor" handler={SequenceEditor}/>
+    <Route path="/sequenceEditor2" name="SequenceEditor2" handler={SequenceEditor2}/>
   </Route>
 );
 
