@@ -122,49 +122,49 @@ var RowView = React.createClass({
   }
 });
 
-// var RowItem = React.createClass({
-//   render: function () {
+var RowItem = React.createClass({
+  render: function () {
 
-//     var row = this.props.row;
-//     var visibilityParameters = this.props.visibilityParameters;
-//     // function  (argument) {
-//     //   // body...
-//     // }
-//     var featureSvgs = _.map(row.features, function (feature) {
-//       var featureSvgStart = 0;
-//       return
-//     })
-//     return (
-//       <div className="infinite-list-item">
-//         <div className="rowContainer">
-//             <text x="5" y="60" textLength={visibilityParameters.rowWidth} lengthAdjust="spacingAndGlyphs">
-//               {row.sequence}
-//             </text> 
-//         </div>
-//       </div>
-//     );
-//   }
-// });
+    var row = this.props.row;
+    var visibilityParameters = this.props.visibilityParameters;
+    // function  (argument) {
+    //   // body...
+    // }
+    var featureSvgs = _.map(row.features, function (feature) {
+      var featureSvgStart = 0;
+      return
+    })
+    return (
+      <div className="infinite-list-item">
+        <div className="rowContainer">
+            <text x="5" y="60" textLength={visibilityParameters.rowWidth} lengthAdjust="spacingAndGlyphs">
+              {row.sequence} WANKER
+            </text> 
+        </div>
+      </div>
+    );
+  }
+});
 
 
-// function insertAnnotationLocationIntoRows (annotationLocation, annotation, rows, rowLength) {
+function insertAnnotationLocationIntoRows (annotationLocation, annotation, rows, rowLength) {
   
-//   var rowStart = Math.floor(annotationLocation.start / rowLength);
-//   var rowEnd = Math.floor(annotationLocation.end / rowLength);
-//   for (var i = rowStart; i < rowEnd + 1; i++) {
-//     var row = rows[i];
-//     var annotationType = annotation.type
-//     row.annotationType
-//   };
-// }
+  var rowStart = Math.floor(annotationLocation.start / rowLength);
+  var rowEnd = Math.floor(annotationLocation.end / rowLength);
+  for (var i = rowStart; i < rowEnd + 1; i++) {
+    var row = rows[i];
+    var annotationType = annotation.type
+    row.annotationType
+  };
+}
 
 
-// function mapAnnotationToRow (annotation, sequenceLength, row, rowLength) {
-//   var annotationLocations = splitAnnotationOnOrigin(annotation, sequenceLength);
-//   annotationLocations.forEach(function(annotationLocation){
-//     insertAnnotationLocationIntoRows(annotationLocation, annotation, rows, rowLength)
-//   });
-// }
+function mapAnnotationToRow (annotation, sequenceLength, row, rowLength) {
+  var annotationLocations = splitAnnotationOnOrigin(annotation, sequenceLength);
+  annotationLocations.forEach(function(annotationLocation){
+    insertAnnotationLocationIntoRows(annotationLocation, annotation, rows, rowLength)
+  });
+}
 
 function prepareRowData (sequenceData, visibilityParameters) {
   var sequenceLength = sequenceData.sequence.length;
