@@ -30,6 +30,7 @@
     "lodash": "^3.6.0",
     "react": "^0.13.1",
     "react-infinite": "^0.3.4",
+    "react-list": "^0.2.10",
     "react-router": "^0.13.1"
   }
 }
